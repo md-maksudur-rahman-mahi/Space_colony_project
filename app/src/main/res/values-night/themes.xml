@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme for dark mode. -->
+    <style name="Base.Theme.SpaceColony" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+    <style name="Theme.SpaceColony" parent="Base.Theme.SpaceColony" />
+</resources>

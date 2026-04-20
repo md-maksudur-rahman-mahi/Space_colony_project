@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- SELECTION PANEL -->
+    <LinearLayout
+        android:id="@+id/selection_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mission Control"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mission Type:"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+        <Spinner
+            android:id="@+id/spinner_mission_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select 2–3 crew members:"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mission_crew"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"/>
+        <Button
+            android:id="@+id/btn_launch_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Launch Mission"
+            android:layout_marginBottom="4dp"/>
+        <Button
+            android:id="@+id/btn_return_to_quarters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⬅ Send Selected to Quarters"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+    </LinearLayout>
+    <!-- MISSION PANEL -->
+    <LinearLayout
+        android:id="@+id/mission_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_threat_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Threat info"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+        <ProgressBar
+            android:id="@+id/pb_threat_hp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:progressTint="@android:color/holo_red_dark"
+            android:layout_marginBottom="8dp"/>
+        <!-- CREW HEALTH BARS (shown during mission) -->
+        <LinearLayout
+            android:id="@+id/crew_hp_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crew Health:"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp"/>
+            <LinearLayout
+                android:id="@+id/crew_hp_bars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/scroll_log"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#111111"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/tv_mission_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#00FF88"
+                android:fontFamily="monospace"
+                android:textSize="12sp"/>
+        </ScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your action:"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <Button
+                android:id="@+id/btn_attack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Attack"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/holo_red_dark"/>
+            <Button
+                android:id="@+id/btn_defend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Defend"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/holo_blue_dark"/>
+            <Button
+                android:id="@+id/btn_special"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Special"
+                android:backgroundTint="@android:color/holo_orange_dark"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_end_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Mission / Return to Selection"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"/>
+        <Button
+            android:id="@+id/btn_home_from_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏠 Back to Home"
+            android:backgroundTint="@android:color/darker_gray"/>
+    </LinearLayout>
+</LinearLayout>

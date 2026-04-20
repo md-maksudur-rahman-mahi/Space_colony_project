@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Space Colony</string>
+    <string name="home">Home</string>
+    <string name="quarters">Quarters</string>
+    <string name="simulator">Simulator</string>
+    <string name="mission">Mission</string>
+    <string name="stats">Stats</string>
+    <string name="recruit_crew">+ Recruit New Crew</string>
+    <string name="train">Train Selected (+1 XP)</string>
+    <string name="launch_mission">Launch Mission</string>
+    <string name="attack">Attack</string>
+    <string name="defend">Defend</string>
+    <string name="special">Special</string>
+    <string name="enter_name">Enter crew member name</string>
+</resources>

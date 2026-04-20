@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.spacecolony.ui.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_quarters"
+            app:destination="@id/quartersFragment"/>
+        <action
+            android:id="@+id/action_home_to_simulator"
+            app:destination="@id/simulatorFragment"/>
+        <action
+            android:id="@+id/action_home_to_mission"
+            app:destination="@id/missionControlFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quartersFragment"
+        android:name="com.example.spacecolony.ui.QuartersFragment"
+        android:label="Quarters">
+        <action
+            android:id="@+id/action_quarters_to_recruit"
+            app:destination="@id/recruitFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/simulatorFragment"
+        android:name="com.example.spacecolony.ui.SimulatorFragment"
+        android:label="Simulator"/>
+    <fragment
+        android:id="@+id/missionControlFragment"
+        android:name="com.example.spacecolony.ui.MissionControlFragment"
+        android:label="Mission Control"/>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.spacecolony.ui.StatsFragment"
+        android:label="Statistics"/>
+    <fragment
+        android:id="@+id/recruitFragment"
+        android:name="com.example.spacecolony.ui.RecruitFragment"
+        android:label="Recruit"/>
+</navigation>
